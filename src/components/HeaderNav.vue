@@ -1,5 +1,52 @@
 <script>
-
+export default{
+    data(){
+            return {
+                navItems : [
+                    {
+                        text : 'characters',
+                        active : false,
+                    },
+                    {
+                        text : 'comics',
+                        active : true,
+                    },
+                    {
+                        text : 'movies',
+                        active : false,
+                    },
+                    {
+                        text : 'tv',
+                        active : false,
+                    },
+                    {
+                        text : 'games',
+                        active : false,
+                    },
+                    {
+                        text : 'collectibles',
+                        active : false,
+                    },
+                    {
+                        text : 'videos',
+                        active : false,
+                    },
+                    {
+                        text : 'fans',
+                        active : false,
+                    },
+                    {
+                        text : 'news',
+                        active : false,
+                    },
+                    {
+                        text : 'shop',
+                        active : false,
+                    },
+                ],
+            }
+        }
+}
 </script>
 
 <template>
@@ -10,16 +57,7 @@
         </div>
         <nav>
             <ul>
-                <li>characters</li>
-                <li class="active">comics</li>
-                <li>movies</li>
-                <li>tv</li>
-                <li>games</li>
-                <li>collectibles</li>
-                <li>videos</li>
-                <li>fans</li>
-                <li>news</li>
-                <li>shop</li>
+                <li :class="(navItems.active) ? 'active' : ''" v-for="item in navItems">{{ item.text }}</li>
             </ul>
         </nav>
     </header>
@@ -59,6 +97,12 @@ nav {
             font-size: .8rem;
             font-weight: 700;
             color: rgb(90, 90, 90);
+            border-bottom: 2px solid transparent;
+
+            &.active{
+                color: #0c7cec;
+                border-bottom: 2px solid #0c7cec;
+            }
         }
     }
 }
