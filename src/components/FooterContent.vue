@@ -46,7 +46,7 @@ export default{
 <template>
 
     <section class="DC-comics_nav">
-        <div class="container">
+        <div class="DC-container">
             <div class="navs">
                 <div class="nav">
                     <p>DC COMICS</p>
@@ -79,6 +79,23 @@ export default{
         </div>
     </section>
 
+    <section class="contacts-gray">
+        <div class="contacts-container">
+            <div class="button">
+                <button>
+                    sign-up now!
+                </button>
+            </div>
+            <div class="contacts">
+                <img src="../assets/img/footer-facebook.png" alt="">
+                <img src="../assets/img/footer-twitter.png" alt="">
+                <img src="../assets/img/footer-youtube.png" alt="">
+                <img src="../assets/img/footer-pinterest.png" alt="">
+                <img src="../assets/img/footer-periscope.png" alt="">
+            </div>
+        </div>
+    </section>
+
 </template>
 
 <style  lang="scss">
@@ -91,7 +108,7 @@ export default{
         overflow: hidden;
     }
 
-    div.container{
+    div.DC-container{
         width: 80%;
         margin: 0 auto;
         display: flex;
@@ -125,6 +142,39 @@ export default{
 
         div.DC-img img{
             width: 450px;
+        }
+    }
+
+    section.contacts-gray{
+        background-color: #2f2f2f;
+        height: 90px;
+    }
+
+    div.contacts-container{
+        width: 80%;
+        margin: 0 auto;
+        height: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        div.button button{
+            border: 2px solid #0c7cec;
+            text-transform: uppercase;
+            color: white;
+            padding: .8rem;
+            background-color: #2f2f2f;
+        }
+
+        p{
+            text-transform: uppercase;
+            color: #0c7cec;
+            font-weight: 700;
+            font-size: 1.1rem;
+        }
+
+        div.contacts img{
+            padding: .5rem;
         }
     }
 
