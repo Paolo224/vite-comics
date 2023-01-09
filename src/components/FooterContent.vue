@@ -1,5 +1,46 @@
 <script>
+export default{
+    data(){
+            return {
+                dcComicsItems : [
+                    'Character',
+                    'Comics',
+                    'Movie',
+                    'TV',
+                    'Games',
+                    'Videos',
+                    'News',
+                ],
+                
+                shop : [
+                    'Shop DC',
+                    'Shop DC Collectibles',
+                ],
+                
+                dc : [
+                    'Terms Of Use',
+                    'Privacy policy(New)',
+                    'Ad Choices',
+                    'Advertising',
+                    'Jobs',
+                    'Subscriptions',
+                    'Talent Workshops',
+                    'CPSC Certificates',
+                    'Ratings',
+                    'Shop Help',
+                    'Contact Us',
+                ],
 
+                sites : [
+                    'DC',
+                    'MAD Magazine',
+                    'DC Kids',
+                    'DC Universe',
+                    'DC Power Visa',
+                ],
+            }
+        }
+}
 </script>
 
 <template>
@@ -8,21 +49,27 @@
         <div class="container">
             <div class="navs">
                 <div class="nav">
+                    <p>DC COMICS</p>
                     <ul>
-
+                        <li v-for="item in dcComicsItems">
+                            {{ item }}
+                        </li>
                     </ul>
+                    <p>SHOP</p>
                     <ul>
-
+                        <li v-for="item in shop">{{ item }}</li>
                     </ul>
                 </div>
                 <div class="nav">
+                    <p>DC</p>
                     <ul>
-
+                        <li v-for="item in dc">{{ item }}</li>
                     </ul>
                 </div>
                 <div class="nav">
+                    <p>SITES</p>
                     <ul>
-
+                        <li v-for="item in sites">{{ item }}</li>
                     </ul>
                 </div>
             </div>
@@ -55,13 +102,24 @@
 
         div.navs{
             width: 45%;
-            border: 2px solid red;
             height: 100%;
             display: flex;
 
             div.nav{
                 width: calc(100% / 3);
-                border: 2px solid blue;
+                padding: .7rem;
+
+                p{
+                    font-weight: 700;
+                    margin: .6rem 0;
+                }
+            }
+
+            ul li{
+                list-style-type: none;
+                font-size: .8rem;
+                color: gray;
+                padding: .2rem 0;
             }
         }
 
