@@ -57,7 +57,7 @@ export default{
         </div>
         <nav>
             <ul>
-                <li :class="(navItems.active) ? 'active' : ''" v-for="item in navItems">{{ item.text }}</li>
+                <li v-for="item in navItems" :class="(navItems.active) ? 'active' : ''">{{ item.text }}</li>
             </ul>
         </nav>
     </header>
